@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jifr7698q-go-gitops
+  description: This is GitOps manifest for jifr7698q-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=jifr7698q-go
+    backstage.io/kubernetes-id: jifr7698q-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: jifr7698q-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jifr7698q-go
